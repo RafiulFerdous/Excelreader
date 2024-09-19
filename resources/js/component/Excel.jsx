@@ -20,12 +20,12 @@ export default function Excel() {
 
     const [selectedFile, setSelectedFile] = useState(null);
 
-    // Handle file input change
+
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0]);
     };
 
-    // Handle form submit
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -43,6 +43,7 @@ export default function Excel() {
                     'Content-Type': 'multipart/form-data'
                 }
             });
+            // console.log("response",response)
             alert('File uploaded and processed successfully');
         } catch (error) {
             console.error("Error uploading file", error);
