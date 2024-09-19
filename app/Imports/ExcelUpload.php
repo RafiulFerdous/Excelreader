@@ -30,7 +30,7 @@ class ExcelUpload implements ToModel,WithHeadingRow, WithEvents
         $this->currentRow++;
         $validator = Validator::make($row, [
             'email' => 'required|email',
-            'phone' => ['required', 'regex:/^\+880\d{9}$/'],
+            'phone' => ['required', 'regex:/^\+?880\d{9}$/'],
             'gender' => 'required',
         ]);
 
